@@ -1,7 +1,5 @@
-# Mosiac
-#### by Affirmative Action
 ## Description
-A visual, social media platform with an emphasis on just the art itself.
+A simple Ruby on Rails clone of Twitter.
 
 ## Instructions
 ### Step 1: Install gems
@@ -14,42 +12,28 @@ A visual, social media platform with an emphasis on just the art itself.
  - bcrypt
  - faker
  - paginate
- - act_as_votable
- - carrierwave
  
 ### Step 2: Raking and running
-	First, create the database (this is likely unnecessary although advised)
+	First, create the database
 		% rake db:migrate
 	Then run the server
 		% rails s
 
-### Step 3: Viewing our website
+### Step 3: Viewing my website
     In a browser, go to
         % localhost:3000
 
 ### Note
-	If the gem, 'postgres' doesn't work (as it continued to give us problems through our development), we found using 
+	If the gem, 'postgres' doesn't work (as it initially gave me problems in my development), I found using 
 		% sudo apt-get install libpq-dev
 	and then going through the above steps again circumvented the problem.
 
 ## User Guide
 
- - Start off by creating an account. All you have to do is provide us with you name, email, and password (no account validation so you can get started right off the bat!)
- - Customize your avatar (using Gravatar)! Make it something cool and unique
+ - Start off by creating an account. All you have to do is provide your name, email, and password (no account validation so you can get started right off the bat!)
+ - Customize your avatar (using Gravatar)
  - Start following people to populate your feed
  - Make posts: these will appear on your feed and profile view
- - Click the like button to like another person's work
-
-## Features
-
-Our platform has tons of great features! With Mosiac you can:
-
- - Upload Music
- - Upload Pictures and Paintings
- - Post short stories, poems, and other pieces of writing
- - Follow your artistic companions
- - Like other people's work
- - A feed to keep you updated with all the latest work
 
 ## (Notable) Documentation
 
@@ -66,8 +50,7 @@ defines user's feed
  > belongs_to :follower, belongs_to :followed
  
  - Micropost
- > belongs_to :user, acts_as_votable
-attr_accessor to Audio and Picture Uploader
+ > belongs_to :user
 
 ### Views
  - Users/edit
@@ -103,7 +86,7 @@ attr_accessor to Audio and Picture Uploader
 ### Controller
 
  - microposts
- > defines upvote, create and destroy (but only by the correct user)
+ > create and destroy (but only by the correct user)
 
  - sessions/ relationships
  > defines create and destroy
@@ -113,10 +96,3 @@ attr_accessor to Audio and Picture Uploader
 
  - static_page
  > checks if user is logged in, session's view
-
-## Contributions
-
-	Omar: User Profile, Presenter
-	Alexandre: Back-end Designer, Presenter
-	Jordan: File Management, Presenter
-	Osman: Front-end Designer
