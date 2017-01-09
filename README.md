@@ -1,6 +1,13 @@
 ## Description
 A simple Ruby on Rails clone of Twitter.
 
+## Lessons Learned
+ - Additional Ruby experience
+ - Learned Rails 4 concepts
+ - User authentication
+ - Application of REST model and MVC
+ - Introduction to a web framework
+
 ## Instructions
 ### Step 1: Install gems
   	In the terminal, type
